@@ -1,7 +1,8 @@
-(function(w) {
+(function($) {
     "use strict";
-    w.ysExit = function(o) {
-
+    
+    $.fn.ysExit = function(o) {
+        var $self = this;
         var defaults = {
                 width: '40%', //popup width
                 height: '30%', //popup height
@@ -11,6 +12,8 @@
                 delay: 0, //delay in ms until the popup is registered
                 debug: false //if true, the cookie will not be set
             },
+            
+            content = insertContent(),
             options = fixOptions(o),
             element = document.querySelector(options.target),
             layer   = document.querySelector('.ys-layer'),
@@ -57,7 +60,6 @@
                     
                     e = e ? e : window.event;
                     from = e.relatedTarget || e.toElement;
-
                     if (!from || from.nodeName === "HTML") {
                         pop.open();
                     }
@@ -77,7 +79,9 @@
                     
                     document.addEventListener('mouseout', pop.mouseLeftWindow, false);
                     closeBt.addEventListener('click', close);
-                    exitBt.addEventListener('click', close);
+                    if(exitBt){
+                        exitBt.addEventListener('click', close);
+                    }
                     
                     if (options.closeOnOutsideClick) {
                         element.addEventListener('click', close);
@@ -100,7 +104,7 @@
 
                     setTimeout(function() {
                         self.setDimension('width', options.width);
-                        self.setDimension('height', options.height);
+                        self.setDimension('height', 'auto');
                     }, 20);
 
                     setTimeout(function() {
@@ -122,7 +126,14 @@
                     }
                 }
             };
-        
+        function insertContent() {
+            
+            // console.log($self);
+            var body = $('body').append('<div class="ys-layer"></div> <div class="ys-container" id="ys-container"><div class="ys-box"><a class="ys-popup-close" href="#">x</a><div class="ys-popup-content"></div></div></div>');
+            $('.ys-popup-content').append($self[0].outerHTML);
+            $self.hide();
+            return true;
+        }
         //helper functions
         function fixOptions(options) {
             var newOptions = {};
@@ -166,4 +177,4 @@
             }
         };
     };
-})(window);
+})(jQuery);

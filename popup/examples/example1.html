@@ -1,0 +1,120 @@
+<!doctype>
+<html>
+<head>
+	<title>Exit popup</title>
+<link rel="stylesheet" href="../css/ysExit.css" type="text/css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/ysExit.min.js"></script>
+</head>
+<body>
+	<style>
+
+		.test2 {
+			background: #F8A434;
+		  	font-family: 'Lato', sans-serif;
+		  	color: #FDFCFB;
+		  	text-align: center;
+		  	padding: 10px;
+		}
+
+		form {
+  width: 450px;
+  margin: 17% auto;
+}
+
+
+.header {
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+
+.description {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  margin: -2px 0 45px;
+}
+
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+
+.button {
+  height: 44px;
+  border: none;
+}
+
+  
+#email {
+  width: 75%;
+  background: #FDFCFB;
+  font-family: inherit;
+  color: #737373;
+  letter-spacing: 1px;
+  text-indent: 5%;
+  border-radius: 5px 0 0 5px;
+}
+
+
+#submit {
+  width: 25%;
+  height: 46px;
+  background: #E86C8D;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+  
+
+#submit:hover {
+  background: #d45d7d;
+}
+  
+
+input:focus {
+  outline: none;
+  outline: 2px solid #E86C8D;
+  box-shadow: 0 0 2px #E86C8D;
+}
+
+.no-thanks {
+  margin: 20px;
+}
+	</style>
+
+  <h2> Move your cursor to another tab</h2>
+
+	<div class="test2">
+		<form action="#" method="post" name="sign up for beta form">
+      <div class="header">
+         <p>Sign Up For Beta</p>
+      </div>
+      <div class="description">
+        <p>Milkshake is almost ready. If you're interested in testing it out, then sign up below to get exclusive access.</p>
+      </div>
+      <div class="input">
+        <input type="text" class="button" id="email" name="email" placeholder="NAME@EXAMPLE.COM">
+        <input type="submit" class="button" id="submit" value="SIGN UP">
+      </div>
+      <div class="no-thanks">
+        <a href="#" class="ys-exit">No Thanks</a>
+      </div>
+    </form>
+	</div>
+	<script>
+    		var options = {
+				debug: true,
+			}
+			$('.test2').ysExit(options);
+	</script>
+</body>
+</html>
