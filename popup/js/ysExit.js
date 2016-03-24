@@ -152,7 +152,7 @@
         }
         
         //start logic
-        if (!cookies.get(options.cookieIdentifier)) {
+        if (!cookies.get('ysExit')) {
             if (typeof options.delay !== 'number') {
                 throw new Error('options.delay must be a numeric value');
             }
