@@ -1,0 +1,23 @@
+{
+  "name": "ysexitpopup",
+  "version": "1.0.1",
+  "description": "jQuery based exit popup model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasmuru/ysExitPopup.git"
+  },
+  "keywords": [
+    "exit",
+    "popup"
+  ],
+  "author": "Murugan Dhamodharan <yasmuru@gmail.com> (https://github.com/yasmuru)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasmuru/ysExitPopup/issues"
+  },
+  "homepage": "https://github.com/yasmuru/ysExitPopup#readme"
+}

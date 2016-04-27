@@ -5,6 +5,11 @@ ysExitPopup is a really simple jQuery exit modal plugin that shows a cookie-enab
 ### Requires
 Latest jQuery plugin js.
 
+``` 
+npm install ysexitpopup --save
+
+```
+
 Include YsExitPopup css and js files.
 
 ``` 
