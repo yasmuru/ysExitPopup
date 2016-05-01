@@ -1,4 +1,4 @@
-# YsExitPopup
+# YsExitPopup [![npm](https://img.shields.io/npm/v/ysexitpopup.svg)](https://www.npmjs.com/package/ysexitpopup)
 
 ysExitPopup is a really simple jQuery exit modal plugin that shows a cookie-enabled modal popup when your cursor moves out of view. Useful to create a confirm dialog asking the users to confirm if they want to quit your webpage.
 
