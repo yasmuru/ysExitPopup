@@ -3,16 +3,15 @@
 
     $.fn.ysExit = function (o) {
         var $self = this;
-        console.log($self)
         var defaults = {
                 width: '40%', //popup width
                 height: '30%', //popup height
                 target: '#ys-container', //popup selector
-                cookieName: 'ysExit', //cookie name
                 cookieValidity: 1, //days
                 closeOnOutsideClick: true, //close popup if user clicks outside
                 delay: 0, //delay in ms until the popup is registered
-                debug: false //if true, the cookie will not be set  
+                debug: false, //if true, the cookie will not be set
+                cookieName: 'ysExit'
             },
 
             content = insertContent(),
