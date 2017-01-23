@@ -28,6 +28,7 @@ Include YsExitPopup css and js files.
 var options = 
 {
 	debug: true,
+	cookieName: 'subscribe-popup'
     cookieValidity: 3,
     delay: 5
 };
@@ -38,6 +39,7 @@ $('.test2').ysExit(options);
 
 Option | Description | Default
 -------|-------------|--------
+`cookieName`|Name of the cookie|ysExit
 `cookieValidity`|Number of days to remember if the popup was closed|1
 `closeOnOutsideClick`|If true the popup will close when clicked outside|true
 `delay`|Delay in ms until the popup is registered|0
